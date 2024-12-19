@@ -5,7 +5,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-html, body {
+ body {
     height: 100%;
     background-color: #f0f4f8;
     color: #333;
@@ -31,11 +31,10 @@ html, body {
 #searchInput {
     width: 300px;
     height: 45px;
-    font-size: 1rem;
     border-radius: 8px;
     border: 2px solid #ccc;
     padding: 10px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease-in-out;
 }
 
 #searchInput:focus {
@@ -56,8 +55,10 @@ html, body {
 }
 
 #searchBtn:hover {
-    background-color: #357ABD;
-    transform: scale(1.05);
+    background-color: white;
+    border:1px solid #4a90e2;
+    color: #4a90e2;
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -67,7 +68,6 @@ html, body {
     align-items: flex-start;
     padding: 20px;
     height: 100%;
-    overflow-y: auto;
 }
 
 #dataList {
@@ -94,8 +94,8 @@ html, body {
 
 #dataList li:hover {
     background-color: #f7faff;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 15);
 }
 
 #dataList li a {
@@ -128,25 +128,4 @@ html, body {
     border: 2px solid #4a90e2;
 }
 
-.clicked-pokemon-details strong {
-    display: inline-block;
-    margin-bottom: 5px;
-}
 
-@media (max-width: 768px) {
-    #dataList {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-
-    .container {
-        font-size: 2rem;
-    }
-
-    #searchInput {
-        width: 250px;
-    }
-
-    #searchBtn {
-        width: 100px;
-    }
-}
